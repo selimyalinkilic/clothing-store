@@ -1,0 +1,109 @@
+.custom-alert {
+  position: fixed;
+  height: 50px;
+  padding: 0.75rem 1.25rem;
+  font-size: 18px;
+  font-weight: lighter;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  animation-duration: 0.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  opacity: 0;
+  cursor: pointer;
+
+  &.show {
+    opacity: 1;
+  }
+  &.alert-type-primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+  }
+
+  &.alert-type-secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+  }
+
+  &.alert-type-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+
+  &.alert-type-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+
+  &.alert-type-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+  }
+
+  &.alert-type-info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+  }
+
+  &.alert-type-light {
+    color: #818182;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+  }
+
+  &.alert-type-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+  }
+
+  &.alert-x-right {
+    &.show {
+      animation-name: fadeInRight;
+      -webkit-animation-name: fadeInRight;
+    }
+  }
+
+  &.alert-x-left {
+    &.show {
+      animation-name: fadeInLeft;
+      -webkit-animation-name: fadeInLeft;
+    }
+  }
+
+  &.alert-y-top {
+    top: 10px;
+  }
+
+  &.alert-y-bottom {
+    bottom: 10px;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    right: -10%;
+  }
+  100% {
+    opacity: 1;
+    right: 10px;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    left: -10%;
+  }
+  100% {
+    opacity: 1;
+    left: 10px;
+  }
+}
