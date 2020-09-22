@@ -1,0 +1,17 @@
+.logged-in-links-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+  & .logged-in-link {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000;
+
+    &:hover,
+    &.active {
+      font-weight: bolder;
+    }
+  }
+}
