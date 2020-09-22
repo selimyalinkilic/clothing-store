@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { auth } from "../../../utils/firebase";
 import "./UserLoggedInLinks.scss";
 
 const UserLoggedInLinks = () => {
@@ -22,13 +23,9 @@ const UserLoggedInLinks = () => {
       >
         Favorites
       </NavLink>
-      <NavLink
-        to="/sign-out"
-        className="logged-in-link"
-        activeClassName="active"
-      >
+      <div className="logged-in-link" onClick={() => auth.signOut()}>
         Sign Out
-      </NavLink>
+      </div>
     </div>
   );
 };

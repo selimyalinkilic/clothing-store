@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import UserLoggedInLinks from "./UserLoggedInLinks/UserLoggedInLinks";
 import "./MenuLinks.scss";
@@ -7,12 +7,12 @@ import "./MenuLinks.scss";
 const MenuLinks = ({ currentUser }) => {
   return (
     <div className="options">
-      <Link className="option" to="/shop">
+      <NavLink className="option" activeClassName="active" to="/shop">
         SHOP
-      </Link>
-      <Link className="option" to="/contact">
+      </NavLink>
+      <NavLink className="option" activeClassName="active" to="/contact">
         CONTACT
-      </Link>
+      </NavLink>
       {currentUser ? (
         <div className="option option-drop-down">
           MY ACCOUNT
@@ -21,9 +21,9 @@ const MenuLinks = ({ currentUser }) => {
           </div>
         </div>
       ) : (
-        <Link className="option" to="/sign-in">
+        <NavLink className="option" activeClassName="active" to="/sign-in">
           SIGN IN
-        </Link>
+        </NavLink>
       )}
     </div>
   );

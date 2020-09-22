@@ -9,6 +9,10 @@
     padding: 10px 15px;
     cursor: pointer;
 
+    &.active {
+      font-weight: bolder;
+    }
+
     &.option-drop-down {
       position: relative;
 
