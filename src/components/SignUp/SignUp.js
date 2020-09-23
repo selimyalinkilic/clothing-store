@@ -59,7 +59,11 @@ class SignUp extends Component {
         alertType: "",
       });
     } catch (err) {
-      console.log(err);
+      this.setState({
+        alert: true,
+        alertText: err.message,
+        alertType: "danger",
+      });
     }
   };
 
